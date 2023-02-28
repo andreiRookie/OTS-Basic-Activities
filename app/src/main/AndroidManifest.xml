@@ -28,13 +28,15 @@
         </activity>
         <activity
             android:name=".ActivityB"
-            android:launchMode="singleInstancePerTask"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
             >
         </activity>
 
         <activity
             android:name=".ActivityC"
             android:launchMode="singleInstancePerTask"
+            android:taskAffinity=""
             >
         </activity>
         <activity

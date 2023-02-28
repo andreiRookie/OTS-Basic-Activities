@@ -24,18 +24,16 @@ class ActivityC : AppCompatActivity() {
 
         buttonToOpenActivityD.setOnClickListener {
             val intent = Intent(this, ActivityD::class.java)
-            intent
-                .addFlags(FLAG_ACTIVITY_CLEAR_TASK)
-                .addFlags(FLAG_ACTIVITY_NEW_TASK)
+            intent.setFlags(FLAG_ACTIVITY_CLEAR_TASK | FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
 
         buttonToCloseActivityC.setOnClickListener {
-            this.finish()
+            finish()
         }
 
         buttonToCloseStack.setOnClickListener {
-            this.finishAffinity()
+            finishAffinity()
         }
     }
 }
